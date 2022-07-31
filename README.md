@@ -24,7 +24,7 @@ This repository is the official PyTorch implementation of "Towards Interpretable
 
 <p align="center">
   <a href="https://github.com/caojiezhang/DAVSR/releases">
-    <img width=70% src="assets/011_ours.gif"/>
+    <img width=100% src="assets/011_ours.gif"/>
   </a>
 </p>
 
