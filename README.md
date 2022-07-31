@@ -20,7 +20,7 @@ Computer Vision Lab, ETH Zurich.
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=caojiezhang/DAVSR)
 
 This repository is the official PyTorch implementation of "Towards Interpretable Video Super-Resolution via Alternating Optimization"
-([arxiv](https://arxiv.org/abs/2207.10765), [supp](https://github.com/caojiezhang/DAVSR/releases/download/v0.0/supplementary.pdf), [pretrained models](https://github.com/caojiezhang/DAVSR/releases), [visual results](https://github.com/caojiezhang/DAVSR/releases)). DAVSR ahcieves state-of-the-art performance in practical time-space video super-resolution. 
+([arxiv](https://arxiv.org/abs/2207.10765), [supp](https://github.com/caojiezhang/DAVSR/releases/download/v0.0/supplementary.pdf), [pretrained models](https://github.com/caojiezhang/DAVSR/releases), [visual results](https://github.com/caojiezhang/DAVSR/releases)). DAVSR achieves state-of-the-art performance in practical time-space video super-resolution. 
 
 <p align="center">
   <a href="https://github.com/caojiezhang/DAVSR/releases">
