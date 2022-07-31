@@ -103,13 +103,14 @@ We achieved state-of-the-art performance on practical space-time video super-res
 
 
 ## Citation
+  ```
   @inproceedings{cao2022davsr,
     title={Towards Interpretable Video Super-Resolution via Alternating Optimization},
     author={Cao, Jiezhang and Liang, Jingyun and Zhang, Kai and Wang, Wenguan and Wang, Qin  and Zhang, Yulun and Tang, Hao and Van Gool, Luc},
     booktitle={European conference on computer vision},
     year={2022}
   }
-
+  ```
 
 ## License and Acknowledgement
 This project is released under the MIT license. We refer to codes from [KAIR](https://github.com/cszn/KAIR), [BasicSR](https://github.com/xinntao/BasicSR), and [mmediting](https://github.com/open-mmlab/mmediting). Thanks for their awesome works. The majority of RVDNet is licensed under CC-BY-NC, however portions of the project are available under separate license terms: KAIR is licensed under the MIT License, BasicSR, Video Swin Transformer and mmediting are licensed under the Apache 2.0 license.
