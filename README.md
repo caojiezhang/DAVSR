@@ -103,12 +103,12 @@ We achieved state-of-the-art performance on practical space-time video super-res
 
 
 ## Citation
-@inproceedings{cao2022davsr,
+  @inproceedings{cao2022davsr,
     title={Towards Interpretable Video Super-Resolution via Alternating Optimization},
     author={Cao, Jiezhang and Liang, Jingyun and Zhang, Kai and Wang, Wenguan and Wang, Qin  and Zhang, Yulun and Tang, Hao and Van Gool, Luc},
     booktitle={European conference on computer vision},
     year={2022}
-}
+  }
 
 
 ## License and Acknowledgement
