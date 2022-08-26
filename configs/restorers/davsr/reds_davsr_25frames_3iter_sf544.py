@@ -33,7 +33,7 @@ model = dict(
 
 # model training and testing settings
 train_cfg = dict(fix_iter=-1) # we have pretrained it.
-test_cfg = dict(metrics=['PSNR','SSIM'], crop_border=2, num_frame_testing=10)
+test_cfg = dict(metrics=['PSNR','SSIM'], crop_border=0, crop_time_border=2, num_frame_testing=10)
 
 # dataset settings
 train_dataset_type = 'SRREDSOrigMultipleGTDataset' 
@@ -154,37 +154,19 @@ data = dict(
             test_mode=False)),
     # val
     val=dict(
-        type=test_dataset_type,
-        lq_folder=f'{data_dir}/REDS4/blur_bicubic/',
-        gt_folder=f'{data_dir}/REDS4/GT/',
+        type=val_dataset_type,
+        lq_folder=f'{data_dir}/testset_REDS4_blur_bicubic/',
+        gt_folder=f'{data_dir}/testset_REDS4_original_HR/',
         num_input_frames=5,
-        pipeline=test_pipeline,
+        pipeline=val_pipeline,
         scale=4,
         val_partition='REDS4',
         test_mode=True),
-    # val=dict(
-    #     type=val_dataset_type,
-    #     lq_folder=f'{data_dir}/REDS_mmedit/train_blur_bicubic_with_val/X4',
-    #     gt_folder=f'{data_dir}/REDS_mmedit/train_orig',
-    #     num_input_frames=5,
-    #     pipeline=val_pipeline,
-    #     scale=4,
-    #     val_partition='REDS4',
-    #     test_mode=True),
     # test
-    # test=dict(
-    #     type=test_dataset_type,
-    #     lq_folder=f'{data_dir}/REDS4/blur_bicubic/',
-    #     gt_folder=f'{data_dir}/REDS4/GT/',
-    #     num_input_frames=10,
-    #     pipeline=test_pipeline,
-    #     scale=4,
-    #     val_partition='REDS4',
-    #     test_mode=True),
     test=dict(
         type=val_dataset_type,
-        lq_folder=f'{data_dir}/REDS_mmedit/train_blur_bicubic_with_val/X4',
-        gt_folder=f'{data_dir}/REDS_mmedit/train_orig',
+        lq_folder=f'{data_dir}/testset_REDS4_blur_bicubic/',
+        gt_folder=f'{data_dir}/testset_REDS4_original_HR/',
         num_input_frames=100,
         pipeline=val_pipeline,
         scale=4,
@@ -211,7 +193,7 @@ lr_config = dict(
 
 checkpoint_config = dict(interval=2500, save_optimizer=True, by_epoch=False)
 # remove gpu_collect=True in non distributed training
-evaluation = dict(interval=2500, save_image=True, gpu_collect=True) #   remove gpu_collect if not use dist train
+evaluation = dict(interval=2500, save_image=False, gpu_collect=True) #   remove gpu_collect if not use dist train
 log_config = dict(
     interval=100,
     hooks=[

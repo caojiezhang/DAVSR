@@ -191,18 +191,18 @@ class DAVSRMODEL(BasicRestorer):
             output = torch.cat(output_all, dim=1)
             del output_all
             gt = torch.cat(gt_all, dim=1)
-            print(output.shape, gt.shape)
+            # print(output.shape, gt.shape)
             del gt_all
 
                 
-        crop_border = self.test_cfg.get('crop_border', 2)
+        crop_time_border = self.test_cfg.get('crop_time_border', 2)
         if gt is not None:
             if output.shape[1] != gt.shape[1]:
                 sf = output.shape[1] // gt.shape[1]
-                output = output[:, crop_border::sf, :, :, :]
+                output = output[:, crop_time_border::sf, :, :, :]
             else:
-                output = output[:,crop_border:-crop_border,...]
-                gt = gt[:,crop_border:-crop_border,...]
+                output = output[:,crop_time_border:-crop_time_border,...]
+                gt = gt[:,crop_time_border:-crop_time_border,...]
 
 
         # If the GT is an image (i.e. the center frame), the output sequence is

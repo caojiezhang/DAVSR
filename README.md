@@ -65,7 +65,7 @@ git clone https://github.com/caojiezhang/DAVSR
 cd DAVSR
 pip install -r requirements.txt
 
-python tools/test.py configs/restorers/uvsrnet/002_pretrain_uvsr3DBDnet_REDS_25frames_3iter_sf544_slomo_modify_newdataset.py work_dirs/002_pretrain_uvsr3DBDnet_REDS_25frames_3iter_sf544_slomo_modify_newdataset/latest.pth
+PYTHONPATH=/bin/..:tools/..: python tools/test.py configs/restorers/uvsrnet/002_pretrain_uvsr3DBDnet_REDS_25frames_3iter_sf544_slomo_modify_newdataset.py work_dirs/002_pretrain_uvsr3DBDnet_REDS_25frames_3iter_sf544_slomo_modify_newdataset/latest.pth
 
 ```
 
@@ -86,7 +86,7 @@ Note: You do **NOT need** to prepare the datasets if you just want to test the m
 
 ```bash
 
-./tools/dist_train.sh configs/restorers/uvsrnet/002_pretrain_uvsr3DBDnet_REDS_25frames_3iter_sf544_slomo_modify_newdataset.py 8
+PYTHONPATH=/bin/..:tools/..: ./tools/dist_train.sh configs/restorers/uvsrnet/002_pretrain_uvsr3DBDnet_REDS_25frames_3iter_sf544_slomo_modify_newdataset.py 8
 
 ```
 
